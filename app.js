@@ -9,7 +9,8 @@ var mongoose = require('mongoose');
 var appRoutes = require('./routes/app');
 
 var app = express();
-mongoose.connect('localhost:27071/node-angular');
+//mongoose.connect('localhost:27071/node-angular');
+mongoose.connect('mongodb://localhost:27017/node-angular?authSource=admin', {useMongoClient:true});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
